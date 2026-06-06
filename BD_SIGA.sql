@@ -162,7 +162,7 @@ GO
 ====================================================*/
 /*
 Se elimina curso_id porque ya se obtiene
-mediante la relaciÛn tarea -> curso
+mediante la relaci√≥n tarea -> curso
 */
 CREATE TABLE notas (
     id INT IDENTITY(1,1) PRIMARY KEY,
@@ -236,7 +236,7 @@ CREATE TABLE observaciones (
 GO
 
 /*====================================================
-  ÕNDICES PARA OPTIMIZAR CONSULTAS
+  √çNDICES PARA OPTIMIZAR CONSULTAS
 ====================================================*/
 
 CREATE INDEX IX_Alumno_Grado
@@ -273,7 +273,7 @@ CREATE INDEX IX_Observacion_Curso
 ON observaciones(curso_id);
 GO
 
---Visualizar informaciÛn de tablas y filegroups
+--Visualizar informaci√≥n de tablas y filegroups
 SELECT O.name, O.type, I.name, I.index_id, FG.name 
 FROM sys.indexes I 
 INNER JOIN sys.filegroups FG ON I.data_space_id = FG.data_space_id 
